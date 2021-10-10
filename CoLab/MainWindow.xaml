@@ -54,6 +54,7 @@
 
         <Button x:Name="Minimize" 
                 Content="-" 
+                Click="Minimize_Click"
                 FontSize="14"
                 FontStretch="Expanded"
                 FontWeight="ExtraBold"
@@ -67,8 +68,9 @@
             </Button.Style>
         </Button>
 
-        <Button x:Name="Resize" 
+        <Button x:Name="Maximize" 
                 Content="□"
+                Click="Maximize_Click"
                 FontSize="12"
                 FontStretch="Expanded"
                 FontWeight="ExtraBold"
@@ -82,6 +84,7 @@
         </Button>
 
         <Button x:Name="Quit" 
+                Click="Quit_Click"
                 Content="X" 
                 FontSize="14" 
                 FontWeight="Bold"
