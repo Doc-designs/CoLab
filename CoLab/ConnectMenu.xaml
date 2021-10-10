@@ -1,0 +1,95 @@
+﻿<Page x:Class="CoLab.ConnectMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoLab"
+        mc:Ignorable="d"
+        Title="ConnectMenu" d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*" MinHeight="90" MaxHeight="120"/>
+            <RowDefinition Height="82*" MinHeight ="41" MaxHeight="350"/>
+            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
+            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
+            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
+            <RowDefinition Height="41*" MinHeight="41"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300" MinWidth="200" MaxWidth="500"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Text="Connect"
+                    Grid.Column="1"
+                       Foreground="#FFB22B50"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       FontSize="60"
+                       FontWeight="Medium" FontFamily="Whimsy TT"
+                    MinWidth="175"
+                    MaxWidth="350"
+                    Height="92" Grid.Row="0" Width="268" Margin="0,0,0,0"/>
+
+        <TextBox x:Name="IP"
+                FontSize="22" 
+                FontWeight="SemiBold" Height="36"
+                Grid.Column="1"
+                Grid.Row="1" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="280"/>
+
+        <Button Click="SelectFiles_Click"
+                Content="Open File" 
+                FontSize="22" 
+                FontWeight="SemiBold"
+                Grid.Column="1" Grid.Row="2" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="208"
+                MinWidth="175" Height="34">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="FloralWhite"/>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Click="Connect_Click"
+                Content="Connect" 
+                FontSize="22" 
+                FontWeight="SemiBold"
+                Grid.Column="1" Grid.Row="3" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" 
+                Width="208"
+                MinWidth="175" Height="34">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="FloralWhite"/>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Click="Back_Click"
+                Content="Back" 
+                FontSize="22" 
+                FontWeight="SemiBold"
+                Grid.Column="1" Grid.Row="4" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="208"
+                MinWidth="175" Height="34">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="FloralWhite"/>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Page>
