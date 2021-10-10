@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\CoLab\\CoLab\\CoLab.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\CoLab\\CoLab.csproj",
       "projectName": "CoLab",
-      "projectPath": "C:\\Users\\Owner\\Desktop\\CoLab\\CoLab\\CoLab.csproj",
+      "projectPath": "C:\\Users\\Owner\\Desktop\\CoLab\\CoLab.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\Desktop\\CoLab\\CoLab\\obj\\",
+      "outputPath": "C:\\Users\\Owner\\Desktop\\CoLab\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
