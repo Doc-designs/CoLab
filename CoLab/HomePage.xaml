@@ -7,81 +7,90 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="FloralWhite"/>
+        </Style>
+    </Page.Resources>
+
+
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*" MinHeight="90" MaxHeight="120"/>
+            <RowDefinition Height="45*" MinHeight="25" MaxHeight="300"/>
             <RowDefinition Height="10*" MaxHeight="350"/>
-            <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
-            <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
-            <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
+            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
             <RowDefinition Height="20*" MinHeight="40"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="0"/>
-            <ColumnDefinition Width="300" MinWidth="200" MaxWidth="500"/>
-            <ColumnDefinition MinWidth="0"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock  Text="  CoLab"
-                    Grid.Column="1"
+        <Viewbox Grid.Column="1">
+            <TextBlock Text="CoLab"
                        Foreground="#FFB22B50"
-                       VerticalAlignment="Bottom"
-                       HorizontalAlignment="Center"
-                       FontSize="60"
+                       VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                       FontSize="48"
                        FontWeight="Medium" FontFamily="Whimsy TT"
-                    MinWidth="175"
-                    MaxWidth="275"
-                    Height="92" Grid.Row="0" Width="268"/>
+                    MinWidth="100"/>
+        </Viewbox>
 
-        <Button Click="Host_Click"
+            <Button Click="Host_Click"
                 Content="Host" 
-                FontSize="22" 
-                FontWeight="SemiBold"
                 Grid.Column="1" Grid.Row="2" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="208"
-                MinWidth="175">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                MinWidth="175"
+                MaxHeight="80" Margin="34,30,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Host</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="Connect_Click"
                 Content="Connect" 
-                FontSize="22" 
-                FontWeight="SemiBold"
                 Grid.Column="1" Grid.Row="3" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center" 
-                Width="208"
-                MinWidth="175">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                MinWidth="175"
+                MaxHeight="80"
+                Margin="34,30,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Connect</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="Files_Click"
                 Content="Files" 
-                FontSize="22" 
-                FontWeight="SemiBold"
                 Grid.Column="1" Grid.Row="4" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="208"
-                MinWidth="175">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                MinWidth="175"
+                MaxHeight="80"
+                Margin="34,30,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Files</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
     </Grid>
 </Page>
