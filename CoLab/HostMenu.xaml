@@ -8,10 +8,23 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HostMenu">
 
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="FloralWhite"/>
+        </Style>
+    </Page.Resources>
+    
     <Grid>
+        
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*" MinHeight="90" MaxHeight="120"/>
+            <RowDefinition Height="45*" MinHeight="90" MaxHeight="200"/>
             <RowDefinition Height="10*" MinHeight="82" MaxHeight="82"/>
             <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
             <RowDefinition Height="41*"/>
@@ -19,56 +32,63 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="0" MaxWidth="250"/>
-            <ColumnDefinition Width="300" MinWidth="0" MaxWidth="500"/>
-            <ColumnDefinition MinWidth="0" MaxWidth="250"/>
+            <ColumnDefinition MinWidth="0"/>
+            <ColumnDefinition Width="300" MinWidth="100"/>
+            <ColumnDefinition MinWidth="0"/>
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock  Text="   Host"
+        <Viewbox Grid.Column="1"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch">
+            <TextBlock  Text="Host"
                     Grid.Column="1"
                        Foreground="#FFB22B50"
                        VerticalAlignment="Top"
                        HorizontalAlignment="Center"
-                       FontSize="60"
-                       FontWeight="Medium" FontFamily="Whimsy TT"
-                    Margin="0,24,0,0"
-                    Height="92" Grid.Row="0" Width="268"/>
+                       FontWeight="Medium" FontFamily="Whimsy TT"/>
+        </Viewbox>
 
         <Button Click="NewProject_Click"
                 Content="New Project" 
-                FontSize="22" 
-                FontWeight="SemiBold"
-                Grid.Column="1" Grid.Row="1" Margin="46,25,45,24">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                Grid.Column="1" Grid.Row="1" 
+                MinWidth="175"
+                MaxHeight="80" Margin="34,24,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>New Project</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="ExistingProject_Click"
                 Content="Existing Project" 
-                FontSize="22" 
-                FontWeight="SemiBold"
-                Grid.Column="1" Grid.Row="2" Margin="46,25,45,24">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                Grid.Column="1" Grid.Row="2" 
+                MinWidth="175"
+                MaxHeight="80" Margin="34,24,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Existing Project</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="Back_Click"
                 Content="Back" 
-                FontSize="22" 
-                FontWeight="SemiBold"
-                Grid.Column="1" Grid.Row="5" Margin="46,25,45,24">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                Grid.Column="1" Grid.Row="4" 
+                MinWidth="175"
+                MaxHeight="80" Margin="34,24,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Back</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
     </Grid>
 

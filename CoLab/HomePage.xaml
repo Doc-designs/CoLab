@@ -24,11 +24,11 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*" MinHeight="25" MaxHeight="300"/>
-            <RowDefinition Height="10*" MaxHeight="350"/>
-            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
-            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
-            <RowDefinition Height="82*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="56*" MinHeight="25" MaxHeight="200"/>
+            <RowDefinition Height="14*" MaxHeight="350"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
             <RowDefinition Height="20*" MinHeight="40"/>
         </Grid.RowDefinitions>
 
@@ -39,7 +39,7 @@
 
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="1">
+        <Viewbox Grid.Column="1" Margin="0,0,0,6">
             <TextBlock Text="CoLab"
                        Foreground="#FFB22B50"
                        VerticalAlignment="Stretch"
@@ -49,11 +49,11 @@
                     MinWidth="100"/>
         </Viewbox>
 
-            <Button Click="Host_Click"
+        <Button Click="Host_Click"
                 Content="Host" 
                 Grid.Column="1" Grid.Row="2" 
                 MinWidth="175"
-                MaxHeight="80" Margin="34,30,34,27">
+                MaxHeight="80" Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>
@@ -68,7 +68,7 @@
                 Grid.Column="1" Grid.Row="3" 
                 MinWidth="175"
                 MaxHeight="80"
-                Margin="34,30,34,27">
+                Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>
@@ -83,7 +83,7 @@
                 Grid.Column="1" Grid.Row="4" 
                 MinWidth="175"
                 MaxHeight="80"
-                Margin="34,30,34,27">
+                Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>
