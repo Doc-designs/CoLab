@@ -6,90 +6,95 @@
         xmlns:local="clr-namespace:CoLab"
         mc:Ignorable="d"
         Title="ConnectMenu" d:DesignHeight="450" d:DesignWidth="800">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="FloralWhite"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="60*" MinHeight="90" MaxHeight="120"/>
-            <RowDefinition Height="82*" MinHeight ="41" MaxHeight="350"/>
+            <RowDefinition Height="56*" MinHeight="100" MaxHeight="200"/>
+            <RowDefinition Height="82*" MinHeight ="75" MaxHeight="350"/>
+            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
+            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
+            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
             <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
-            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
-            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
-            <RowDefinition Height="41*" MinHeight="41"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition MinWidth="0"/>
             <ColumnDefinition Width="300" MinWidth="200" MaxWidth="500"/>
-            <ColumnDefinition/>
+            <ColumnDefinition MinWidth="0"/>
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock  Text="Connect"
-                    Grid.Column="1"
+        <Viewbox Grid.Column="1" Margin="0,0,0,6">
+            <TextBlock Text="Connect"
                        Foreground="#FFB22B50"
-                       VerticalAlignment="Bottom"
-                       HorizontalAlignment="Center"
-                       FontSize="60"
+                       VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                       FontSize="48"
                        FontWeight="Medium" FontFamily="Whimsy TT"
-                    MinWidth="175"
-                    MaxWidth="350"
-                    Height="92" Grid.Row="0" Width="268" Margin="0,0,0,0"/>
+                    MinWidth="100"/>
+        </Viewbox>
 
         <TextBox x:Name="IP"
                 FontSize="22" 
-                FontWeight="SemiBold" Height="36"
+                FontWeight="SemiBold"
                 Grid.Column="1"
-                Grid.Row="1" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="280"/>
+                Grid.Row="1" Margin="34,24,34,24"/>
 
         <Button Click="SelectFiles_Click"
-                Content="Open File" 
-                FontSize="22" 
-                FontWeight="SemiBold"
+                Content="Select Files" 
                 Grid.Column="1" Grid.Row="2" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="208"
-                MinWidth="175" Height="34">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                MinWidth="175"
+                MaxHeight="80" Margin="34,24,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Select Files</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="Connect_Click"
                 Content="Connect" 
-                FontSize="22" 
-                FontWeight="SemiBold"
                 Grid.Column="1" Grid.Row="3" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center" 
-                Width="208"
-                MinWidth="175" Height="34">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                MinWidth="175"
+                MaxHeight="80"
+                Margin="34,24,34,27">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Connect</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
 
         <Button Click="Back_Click"
                 Content="Back" 
-                FontSize="22" 
-                FontWeight="SemiBold"
                 Grid.Column="1" Grid.Row="4" 
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="208"
-                MinWidth="175" Height="34">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="FloralWhite"/>
-                </Style>
-            </Button.Style>
+                VerticalAlignment="Top"
+                MinWidth="175"
+                MaxHeight="80"
+                Margin="34,45,34,0" Height="45">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Back</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
         </Button>
     </Grid>
 </Page>

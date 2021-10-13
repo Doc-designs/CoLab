@@ -24,7 +24,7 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="56*" MinHeight="25" MaxHeight="200"/>
+            <RowDefinition Height="56*" MinHeight="100" MaxHeight="200"/>
             <RowDefinition Height="14*" MaxHeight="350"/>
             <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
             <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
@@ -33,9 +33,9 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition MinWidth="0"/>
+            <ColumnDefinition MinWidth="250"/>
+            <ColumnDefinition MinWidth="0"/>
 
         </Grid.ColumnDefinitions>
 

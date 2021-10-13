@@ -19,34 +19,32 @@
             <Setter Property="Background" Value="FloralWhite"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid>
-        
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*" MinHeight="90" MaxHeight="200"/>
-            <RowDefinition Height="10*" MinHeight="82" MaxHeight="82"/>
-            <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="41*" MinHeight="82" MaxHeight="82"/>
+            <RowDefinition Height="56*" MinHeight="100" MaxHeight="200"/>
+            <RowDefinition Height="93*" MinHeight="82" MaxHeight="150"/>
+            <RowDefinition Height="93*" MinHeight="82" MaxHeight="150"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="93*" MinHeight="82" MaxHeight="150"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="0"/>
-            <ColumnDefinition Width="300" MinWidth="100"/>
+            <ColumnDefinition MinWidth="250"/>
             <ColumnDefinition MinWidth="0"/>
 
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="1"
-                 VerticalAlignment="Stretch"
-                 HorizontalAlignment="Stretch">
-            <TextBlock  Text="Host"
-                    Grid.Column="1"
+        <Viewbox Grid.Column="1" Margin="0,0,0,6">
+            <TextBlock Text="Host"
                        Foreground="#FFB22B50"
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Center"
-                       FontWeight="Medium" FontFamily="Whimsy TT"/>
+                       VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                       FontSize="48"
+                       FontWeight="Medium" FontFamily="Whimsy TT"
+                    MinWidth="100"/>
         </Viewbox>
 
         <Button Click="NewProject_Click"
@@ -67,7 +65,8 @@
                 Content="Existing Project" 
                 Grid.Column="1" Grid.Row="2" 
                 MinWidth="175"
-                MaxHeight="80" Margin="34,24,34,27">
+                MaxHeight="80"
+                Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>
@@ -81,7 +80,8 @@
                 Content="Back" 
                 Grid.Column="1" Grid.Row="4" 
                 MinWidth="175"
-                MaxHeight="80" Margin="34,24,34,27">
+                MaxHeight="80"
+                Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>

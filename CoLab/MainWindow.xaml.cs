@@ -17,9 +17,6 @@ namespace CoLab
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool maximized = false;
-        double savedWidth;
-        double savedHeight;
 
         public MainWindow()
         {
@@ -44,18 +41,16 @@ namespace CoLab
 
         private void Maximize_Click(object sender, RoutedEventArgs e)
         {
-            if (maximized)
+            if (this.WindowState == WindowState.Maximized)
             {
                 this.WindowState = WindowState.Normal;
                 this.Maximize.Content = "□";
-                maximized = false;
 
             }
             else
             {
                 this.WindowState = WindowState.Maximized;
                 this.Maximize.Content = "■";
-                maximized = true;
             }
         }
     }
