@@ -21,22 +21,22 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="56*" MinHeight="100" MaxHeight="200"/>
-            <RowDefinition Height="82*" MinHeight ="75" MaxHeight="350"/>
-            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
-            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
-            <RowDefinition Height="82*" MinHeight="90" MaxHeight="200"/>
-            <RowDefinition Height="82*" MinHeight="41" MaxHeight="82"/>
+            <RowDefinition Height="20*" MinHeight="65" MaxHeight="200"/>
+            <RowDefinition Height="20*" MinHeight ="78" MaxHeight="125"/>
+            <RowDefinition Height="20*" MinHeight="78" MaxHeight="200"/>
+            <RowDefinition Height="20*" MinHeight="78" MaxHeight="200"/>
+            <RowDefinition Height="20*" MinHeight="78" MaxHeight="200"/>
+            <RowDefinition Height="100*" MinHeight="70" MaxHeight="200"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="0"/>
-            <ColumnDefinition Width="300" MinWidth="200" MaxWidth="500"/>
+            <ColumnDefinition MinWidth="250"/>
             <ColumnDefinition MinWidth="0"/>
 
         </Grid.ColumnDefinitions>
 
-        <Viewbox Grid.Column="1" Margin="0,0,0,6">
+        <Viewbox Grid.Column="1">
             <TextBlock Text="Connect"
                        Foreground="#FFB22B50"
                        VerticalAlignment="Stretch"
@@ -47,10 +47,11 @@
         </Viewbox>
 
         <TextBox x:Name="IP"
-                FontSize="22" 
+                FontSize="28" 
                 FontWeight="SemiBold"
                 Grid.Column="1"
-                Grid.Row="1" Margin="34,24,34,24"/>
+                Grid.Row="1"
+                Margin="34,24,34,24"/>
 
         <Button Click="SelectFiles_Click"
                 Content="Select Files" 
@@ -84,10 +85,9 @@
         <Button Click="Back_Click"
                 Content="Back" 
                 Grid.Column="1" Grid.Row="4" 
-                VerticalAlignment="Top"
                 MinWidth="175"
                 MaxHeight="80"
-                Margin="34,45,34,0" Height="45">
+                Margin="34,24,34,27">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Viewbox>

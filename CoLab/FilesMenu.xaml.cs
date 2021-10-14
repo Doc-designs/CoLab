@@ -22,5 +22,20 @@ namespace CoLab
         {
             InitializeComponent();
         }
+
+        private void SelectFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

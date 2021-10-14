@@ -8,7 +8,90 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FilesMenu">
 
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="FloralWhite"/>
+        </Style>
+    </Page.Resources>
+
+
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+            <RowDefinition Height="45*" MinHeight="82" MaxHeight="300"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="0" MaxWidth="300"/>
+            <ColumnDefinition MinWidth="0"/>
+            <ColumnDefinition MinWidth="0"/>
+            <ColumnDefinition MinWidth="0"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Column="1" 
+                 Grid.ColumnSpan="2"
+                 Margin="0,0,0,6">
+            <TextBlock Text="Files"
+                       Foreground="#FFB22B50"
+                       VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                       FontSize="48"
+                       FontWeight="Medium" FontFamily="Whimsy TT"
+                    MinWidth="100"/>
+        </Viewbox>
+
+        <Button Click="SelectFile_Click"
+                Content="Select File" 
+                Grid.Column="0" Grid.Row="1" 
+                MinWidth="175"
+                MaxHeight="80" Margin="0,26,25,26">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Select File</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+
+        <Button Click="CreateFile_Click"
+                Content="Create File" Grid.Row="2" 
+                MinWidth="175"
+                MaxHeight="80"
+                Margin="0,26,25,26">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock>Create File</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+
+        <Button Click="Cancel_Click"
+                FontSize="40"
+                Content=" 🗙" Grid.Row="4" 
+                Width="50"
+                Height="50"
+                Margin="62,20,88,20">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Viewbox>
+                        <TextBlock Background="#FFB22B50" Width="52"
+                                   Height="52" TextWrapping="NoWrap" TextAlignment="Center">🗙</TextBlock>
+                    </Viewbox>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
     </Grid>
 </Page>
