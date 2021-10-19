@@ -18,19 +18,87 @@
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <Setter Property="Background" Value="FloralWhite"/>
         </Style>
+
+        <!--<ImageBrush x:Key="UpArrow_Default" ImageSource="Assets/Up_Arrow_Default.png"/>
+        <ImageBrush x:Key="DownArrow_Default" ImageSource="Assets/Down_Arrow_Default.png"/>-->
         <Style TargetType="ScrollBar">
             <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="OverridesDefaultStyle" Value="True"/>
 
             <Style.Triggers>
+
                 <Trigger Property="Orientation"
-                         Value="Vertical"/>
-                <Setter Property="Width" Value="80"/>
-                <Setter Property="Height" Value="490"/>
-                <Setter Property="Margin" Value="20"/>
-                <Trigger/>
+                     Value="Vertical">
+                    <Setter Property="Width"
+                            Value="80"/>
+                    <Setter Property="Height"
+                            Value="490"/>
+                    <Setter Property="Margin"
+                            Value="20"/>
+                    <Setter Property="Template"
+                            Value="{DynamicResource VerticalScrollbar}"/>
+                </Trigger>
+                
             </Style.Triggers>
         </Style>
+
+        <ControlTemplate x:Key="VerticalScrollbar"
+                         TargetType="{x:Type ScrollBar}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="1"
+                        CornerRadius="20"
+                        Margin="10"
+                        Background="Aquamarine">
+                </Border>
+
+                <RepeatButton
+                        Focusable="False"
+                        Height="80"
+                        Command="ScrollBar.LineUpCommand">
+                </RepeatButton>
+
+                <RepeatButton
+                        Grid.Row="2"
+                        Focusable="False"
+                        Height="80"
+                        Command="ScrollBar.LineDownCommand">
+                </RepeatButton>
+
+                <Track
+                    Name="PART_Track"
+                    Grid.Row="1"
+                    IsDirectionReversed="True">
+
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton
+                                Margin="3, 2, 3, 2"
+                                Command="ScrollBar.PageUpCommand">
+
+                        </RepeatButton>
+                    </Track.DecreaseRepeatButton>
+
+                    <Track.Thumb>
+                        <Thumb>
+
+                        </Thumb>
+                    </Track.Thumb>
+
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton
+                                Margin="3, 2, 3, 2"
+                                Command="ScrollBar.PageDownCommand"/>
+                    </Track.IncreaseRepeatButton>
+
+                </Track>
+
+            </Grid>
+        </ControlTemplate>
     </Page.Resources>
 
 
